@@ -16,28 +16,159 @@
   
     <!-- Your Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center center/cover;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .hero-section .hero-tagline {
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      .hero-buttons .btn {
+        margin: 10px;
+      }
+
+      .intro,
+      .whats-new,
+      .area-we-cover-tabs,
+      .stats-section,
+      .partners {
+        margin-top: 40px;
+      }
+
+      .event {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .event img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .event-details {
+        flex: 1;
+      }
+
+      .area-tab-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .area-tab {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .area-tab:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      .area-tab.active {
+        background-color: #0056b3;
+      }
+
+      .area-tab-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .area-tab-content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      .area-tab-content.active {
+        display: block;
+      }
+
+      .stats-container .stat-box {
+        margin-bottom: 20px;
+      }
+
+      .partners {
+        margin-top: 40px;
+        padding: 40px 0;
+        background-color: #f9f9f9;
+      }
+
+      .partners h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .partners p {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .partner-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .partner-logo {
+        max-width: 150px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+      }
+
+      .partner-logo:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
   </head>
   
 <body>
   <!-- Placeholder for the navigation bar -->
   <div id="navbar-placeholder"></div>
   <header class="hero-section">
-    <div class="hero-overlay">
-      <div class="container text-center">
-        <h1>
-          <span class="text-white">Empowering Youth,</span><br />
-          <span class="text-highlight">Transforming Communities</span>
-        </h1>
-        <p class="hero-tagline">
-          Creating safe spaces and meaningful opportunities for young people<br />
-          to learn, grow, and thrive in their communities.
-        </p>
-        <div class="hero-buttons mt-4">
-          <a href="ourprogram.html" class="btn btn-teal me-2">Our Programs</a>
-          <a href="#join" class="btn btn-light">Join Us</a>
-        </div>
-        <p class="scroll-down mt-5">Scroll Down<br /><i class="bi bi-chevron-down"></i></p>
+    <div class="container text-center">
+      <h1>
+        <span class="text-white">Empowering Youth,</span><br />
+        <span class="text-highlight">Transforming Communities</span>
+      </h1>
+      <p class="hero-tagline">
+        Creating safe spaces and meaningful opportunities for young people<br />
+        to learn, grow, and thrive in their communities.
+      </p>
+      <div class="hero-buttons mt-4">
+        <a href="ourprogram.html" class="btn btn-teal me-2">Our Programs</a>
+        <a href="#join" class="btn btn-light">Join Us</a>
       </div>
+      <p class="scroll-down mt-5">Scroll Down<br /><i class="bi bi-chevron-down"></i></p>
     </div>
   </header>
   <section class="intro">
@@ -73,20 +204,22 @@
         <button class="area-tab" data-target="havering">Havering</button>
         <button class="area-tab" data-target="hackney">Hackney</button>
       </div>
-      <div class="area-tab-content active" id="barking">
-        <p>We run weekly programs and skate clubs across Barking & Dagenham community centres and schools.</p>
-      </div>
-      <div class="area-tab-content" id="newham">
-        <p>Newham youth have access to wellbeing lounges and streetball playouts during school breaks.</p>
-      </div>
-      <div class="area-tab-content" id="redbridge">
-        <p>Redbridge residents can join our digital and creative workshops year-round at partner venues.</p>
-      </div>
-      <div class="area-tab-content" id="havering">
-        <p>We host annual community festivals and mobile skate parks in Havering parks and libraries.</p>
-      </div>
-      <div class="area-tab-content" id="hackney">
-        <p>Hackney youth can access mentoring and creative arts programs through our partners and pop-ups.</p>
+      <div class="area-tab-content-wrapper">
+        <div class="area-tab-content active" id="barking">
+          <p>We run weekly programs and skate clubs across Barking & Dagenham community centres and schools.</p>
+        </div>
+        <div class="area-tab-content" id="newham">
+          <p>Newham youth have access to wellbeing lounges and streetball playouts during school breaks.</p>
+        </div>
+        <div class="area-tab-content" id="redbridge">
+          <p>Redbridge residents can join our digital and creative workshops year-round at partner venues.</p>
+        </div>
+        <div class="area-tab-content" id="havering">
+          <p>We host annual community festivals and mobile skate parks in Havering parks and libraries.</p>
+        </div>
+        <div class="area-tab-content" id="hackney">
+          <p>Hackney youth can access mentoring and creative arts programs through our partners and pop-ups.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -126,15 +259,15 @@
     </div>
   </section>
   <section class="partners">
-    <div class="container">
-      <h2>Our Community Partners</h2>
-      <p>We’re proud to collaborate with organizations that share our vision for youth development and community impact.</p>
-      <div class="partner-logos">
-        <img src="images/logos/UkonLogoTransparent.png" alt="UKON CAREERS" />
-        <img src="images/logos/IMG_4268.png" alt="The London Borough of Barking and Dagenham" />
-        <img src="images/logos/Screenshot 2025-01-06 233209.png" alt="Barking Sports for Change" />
-        <img src="images/logos/R copy.png" alt="LTA" />
-        <img src="images/logos/WhatsApp Image 2025-01-19 at 23.35.02_f7816e42.jpg" alt="Mark Your Mark" />
+    <div class="container text-center">
+      <h2 class="mb-4">Our Community Partners</h2>
+      <p class="mb-4">We’re proud to collaborate with organizations that share our vision for youth development and community impact.</p>
+      <div class="partner-logos d-flex flex-wrap justify-content-center align-items-center gap-4">
+        <img src="images/logo/UkonLogoTransparent.png" alt="UKON CAREERS" class="partner-logo" />
+        <img src="images/logo/IMG_4268.png" alt="The London Borough of Barking and Dagenham" class="partner-logo" />
+        <img src="images/logo/Screenshot 2025-01-06 233209.png" alt="Barking Sports for Change" class="partner-logo" />
+        <img src="images/logo/R.png" alt="LTA" class="partner-logo" />
+        <img src="images/logo/WhatsApp Image 2025-01-19 at 23.35.02_f7816e42.jpg" alt="Mark Your Mark" class="partner-logo" />
       </div>
     </div>
   </section>
@@ -198,7 +331,7 @@
           </a>
         </div>
         <p class="contact-info mt-3">
-          <strong>Phone:</strong> +44 7495 071150<br />
+          <strong>Phone:</strong> <a href="tel:07495071150"></a> 07495 071150<br />
           <strong>Email:</strong> <a href="mailto:youthspotbar@outlook.com">youthspotbar@outlook.com</a>
         </p>
       </div>
@@ -267,6 +400,25 @@
     }, { threshold: 0.6 });
 
     counters.forEach(counter => observer.observe(counter));
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll(".area-tab");
+      const contents = document.querySelectorAll(".area-tab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Remove active class from all tabs and contents
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((c) => c.classList.remove("active"));
+
+          // Add active class to the clicked tab and corresponding content
+          tab.classList.add("active");
+          const target = tab.getAttribute("data-target");
+          document.getElementById(target).classList.add("active");
+        });
+      });
+    });
   </script>
 </body>
 </html>

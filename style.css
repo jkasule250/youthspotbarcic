@@ -26,7 +26,7 @@ body {
 
   .hero-section {
     position: relative;
-    background: url('images/header-bg.jpg') center center/cover no-repeat;
+    background: url('images/others/header.jpg') center center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;

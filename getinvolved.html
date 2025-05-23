@@ -11,8 +11,63 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
   
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  
     <!-- Your Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .cta-btn {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-bg.jpg') no-repeat center center/cover;
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+      }
+
+      .hero-buttons .btn {
+        margin: 10px;
+      }
+
+      .volunteer-hours {
+        margin: 20px 0;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      ul li {
+        margin-bottom: 10px;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .section-content {
+        margin-bottom: 40px;
+      }
+    </style>
   </head>
 <body>
   <!-- Placeholder for the navigation bar -->
@@ -20,122 +75,142 @@
   <header class="hero-section">
     <div class="hero-overlay">
       <div class="container text-center">
-        <h1>
-          <span class="text-white">Join our movement,</span><br />
-          <span class="text-highlight">Support our youth</span>
+        <h1 class="display-4">
+          <span class="text-white">Join Our Movement,</span><br />
+          <span class="text-highlight">Support Our Youth</span>
         </h1>
-        <p class="hero-tagline">
+        <p class="lead">
           Creating safe spaces and meaningful opportunities for young people<br />
           to learn, grow, and thrive in their communities.
         </p>
         <div class="hero-buttons mt-4">
-          <a href="ourprogram.html" class="btn btn-teal me-2">Our Programs</a>
-          <a href="#join" class="btn btn-light">Join Us</a>
+          <a href="ourprogram.html" class="btn btn-primary me-2">Our Programs</a>
+          <a href="#join" class="btn btn-outline-light">Join Us</a>
         </div>
-        <p class="scroll-down mt-5">Scroll Down<br /><i class="bi bi-chevron-down"></i></p>
       </div>
     </div>
   </header>
-  <main class="container">
-    <section>
-      <h2>Volunteer With Us</h2>
+  <main class="container my-5">
+    <!-- Volunteer Section -->
+    <section class="section-content">
+      <h2 class="section-title">Volunteer With Us</h2>
       <p>We're always looking for passionate, community-driven people to support our work — whether you're skilled in arts, coaching, mentoring, or just want to help out at events.</p>
-      <div class="volunteer-hours">
+      <p>Join us and make a difference in the lives of young people in our community.</p>
     </section>
 
-    <section>
-      <h2>Work Experience & Placements</h2>
+    <!-- Work Experience Section -->
+    <section class="section-content">
+      <h2 class="section-title">Work Experience & Placements</h2>
       <p>We offer hands-on work experience opportunities for students, young professionals, and career changers looking to support youth development and community outreach.</p>
       <p>Here, you will find our links to join our workshops or programmes, some of which are paid/non-paid or offer gift vouchers.</p>
       <ul>
         <li>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyRqO6TqYiB78yaQhTkqECBoS-BlQUUZ2PRGwbjCMiSW0FNg/viewform?embedded=true" target="_blank" class="cta-btn">Work Experience Programme (13yrs-18yrs)</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyRqO6TqYiB78yaQhTkqECBoS-BlQUUZ2PRGwbjCMiSW0FNg/viewform?embedded=true" target="_blank" class="cta-btn">
+            <i class="fas fa-briefcase"></i> Work Experience Programme (13yrs-18yrs)
+          </a>
         </li>
         <li>
-         <p></p><a href="https://example.com/bridging-the-gap" target="_blank" class="cta-btn">Bridging the Gap for Girls Programme (10yrs-27yrs)</a> </p>
+          <a href="https://example.com/bridging-the-gap" target="_blank" class="cta-btn">
+            <i class="fas fa-users"></i> Bridging the Gap for Girls Programme (10yrs-27yrs)
+          </a>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2>Partner With Us</h2>
+    <!-- Partner Section -->
+    <section class="section-content">
+      <h2 class="section-title">Partner With Us</h2>
       <p>We're proud to collaborate with schools, local businesses, and national youth initiatives. Let's work together to build a stronger, more connected Barking!</p>
     </section>
 
-    <section>
-      <h2>Sign up to Easyfundraising</h2>
+    <!-- Easyfundraising Section -->
+    <section class="section-content">
+      <h2 class="section-title">Sign up to Easyfundraising</h2>
       <p>All you need to do is sign up and shop via the easyfundraising website or App when you're shopping with over 7,500 brands including eBay, Tesco, Marks & Spencer, Just Eat and more!</p>
       <p>
-        <a href="https://www.easyfundraising.org.uk/causes/youth-spot-bar-cic/?&utm_medium=Email-share&utm_source=Newsletter" target="_blank" class="cta-btn">Easy Fund Raising</a>
-        <br><br>
+        <a href="https://www.easyfundraising.org.uk/causes/youth-spot-bar-cic/?&utm_medium=Email-share&utm_source=Newsletter" target="_blank" class="cta-btn">
+          <i class="fas fa-shopping-cart"></i> Easy Fund Raising
+        </a>
       </p>
     </section>
 
-    <div style="text-align: center; margin: 40px 0;">
-      <a href="events.html" class="cta-btn">View Events</a>
+    <!-- View Events Button -->
+    <div class="text-center my-5">
+      <a href="events.html" class="cta-btn">
+        <i class="fas fa-calendar-alt"></i> View Events
+      </a>
     </div>
   </main>
 
-  <footer class="footer-new">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="program.html#skate">Roller Skate Club</a></li>
-          <li><a href="program.html#smoothie">Smoothie Splash Bar</a></li>
-          <li><a href="program.html#urban">Touch of Urban</a></li>
-          <li><a href="program.html#dance">Dance Fitness Session</a></li>
-          <li><a href="program.html#workshop">Hosting & Facilitating Workshops</a></li>
-          <li><a href="program.html#library">Kick Ball Library</a></li> 
-          <li><a href="program.html#street">Street Ball Playouts</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="programs.html#wellbeing">Well-being Lounge</a></li>
-          <li><a href="programs.html#events">Community Events</a></li>
-          <li><a href="get-involved.html#placements">Placements</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="getinvolved.html">Get Involved</a></li>
-          <li><a href="ourprogram.html">Programs</a></li>
-        </ul>
-      </div>
-      <div class="footer-col newsletter">
-        <h4>Newsletter</h4>
-        <form action="#" method="post">
-          <input type="email" placeholder="Email Adress" required />
-          <button type="submit">Subscribe</button>
-        </form>
-        <div class="social-icons">
-          <a href="https://wa.me/+447495071150"><img src="images/social/Whatsapp-Icon--Streamline-Svg-Logos.png" alt="WhatsApp" /></a>
-          <a href="#"><img src="images/social/Instagram--Streamline-Ios-14.png" alt="Instagram" /></a>
-          <a href="#"><img src="images/social/Facebook--Streamline-Svg-Logos.png" alt="Facebook" /></a>
+  <footer class="footer-new bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Programs Section -->
+        <div class="col-md-3">
+          <h4>Programs</h4>
+          <ul class="list-unstyled">
+            <li><a href="ourprogram.html#skate" class="text-white">Roller Skate Club</a></li>
+            <li><a href="ourprogram.html#smoothie" class="text-white">Smoothie Splash Bar</a></li>
+            <li><a href="ourprogram.html#urban" class="text-white">Touch of Urban</a></li>
+            <li><a href="ourprogram.html" class="text-white">Dance Fitness Session</a></li>
+            <li><a href="ourprogram.html" class="text-white">Hosting & Facilitating Workshops</a></li>
+            <li><a href="ourprogram.html#library" class="text-white">Kick Ball Library</a></li>
+            <li><a href="ourprogram.html" class="text-white">Street Ball Playouts</a></li>
+          </ul>
         </div>
-        <p class="contact-info">
-           +44 7495 071150<br />
-        <a href="mailto:youthspotbar@outlook.com"><strong>youthspotbar@outlook.com</strong></a>
-        </p>
+
+        <!-- Services Section -->
+        <div class="col-md-3">
+          <h4>Services</h4>
+          <ul class="list-unstyled">
+            <li><a href="ourprogram.html" class="text-white">Well-being Lounge</a></li>
+            <li><a href="ourprogram.html" class="text-white">Community Events</a></li>
+            <li><a href="getinvolved.html#placements" class="text-white">Placements</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="col-md-3">
+          <h4>Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="about.html" class="text-white">About</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+            <li><a href="media.html" class="text-white">Media</a></li>
+            <li><a href="events.html" class="text-white">Events</a></li>
+            <li><a href="getinvolved.html" class="text-white">Get Involved</a></li>
+            <li><a href="ourprogram.html" class="text-white">Programs</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="col-md-3">
+          <h4>Newsletter</h4>
+          <p>Subscribe to our newsletter to stay updated on our latest programs and events.</p>
+          <form action="#" method="post" class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="form-control mb-2" required />
+            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+          </form>
+          <div class="social-icons mt-3">
+            <a href="https://wa.me/+447495071150" class="text-white me-2" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp fa-lg"></i>
+            </a>
+            <a href="#" class="text-white me-2" aria-label="Instagram">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="#" class="text-white" aria-label="Facebook">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <hr class="bg-white" />
+        <p>&copy; 2025 Youth Spot Bar CIC. All rights reserved.</p>
+        <a href="terms.html" class="text-white me-2">Terms & Conditions</a> |
+        <a href="privacy.html" class="text-white ms-2">Privacy Policy</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <hr />
-      <p>&copy; 2025 Youth Spot Bar CIC</p>
-      <div class="footer-links">
-        <a href="terms.html">Terms & Conditions</a> |
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
-    </div>
-    
   </footer>
   <script>
     // Load navbar.html dynamically
@@ -143,52 +218,9 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById("navbar-placeholder").innerHTML = data;
-  
-        // Wait for the DOM to register the elements
-        const navLinks = document.querySelectorAll(".navbar .nav-link");
-        const navbarCollapse = document.querySelector(".navbar-collapse");
-  
-        navLinks.forEach(link => {
-          link.addEventListener("click", () => {
-            // Collapse menu only if it's visible (i.e. on mobile)
-            if (window.innerWidth < 992 && navbarCollapse.classList.contains("show")) {
-              new bootstrap.Collapse(navbarCollapse).hide();
-            }
-          });
-        });
       })
       .catch(err => console.error("Failed to load navbar:", err));
   </script>
-  <script>
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-  
-    burger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.counter');
-
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      let current = 0;
-      const increment = target / 100;
-
-      const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-          counter.innerText = Math.ceil(current);
-          requestAnimationFrame(updateCounter);
-        } else {
-          counter.innerText = target;
-        }
-      };
-
-      updateCounter();
-    });
-  });
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
