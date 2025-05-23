@@ -140,8 +140,49 @@
         display: block;
       }
 
-      .stats-container .stat-box {
-        margin-bottom: 20px;
+      .stats-section {
+        padding: 40px 0;
+      }
+
+      .stats-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .stat-box {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .stat-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
       }
 
       .partners {
@@ -216,7 +257,7 @@
         <div class="event-details">
           <h3>Skate Jam Fitness</h3>
           <p>Skate Jam Fitness is all about fun, fitness, and community. We're inviting people of all ages to come together for high-energy skate workouts to upbeat music. It’s more than just exercise—it’s movement, rhythm, and joy on wheels. Whether you're a beginner or a pro, you'll leave feeling energized and connected.</p>
-          <p><strong>Dates:</strong> Saturdays from 17th of May - 28th of June 2025</p>
+          <p><strong>Dates:</strong> Saturdays from 7th of June - 19th of July 2025</p>
           <p><strong>Address:</strong> Park Active Age Centre, Rectory Rd, Dagenham RM10 9SA</p>
           <p><strong>Time:</strong> 12:30 PM - 1:30 PM</p>
           <p><strong>Cost:</strong> Absolutely FREE!</p>
@@ -258,29 +299,29 @@
     <div class="container text-center">
       <h2 class="mb-4">Our Impact</h2>
       <div class="row stats-container">
-        <div class="col-md-3 stat-box">
-          <div class="icon-circle bg-primary text-white mb-3">
+        <div class="col-6 col-md-3 stat-box">
+          <div class="icon-circle bg-primary text-white mb-3 mx-auto">
             <i class="bi bi-people-fill"></i>
           </div>
           <h3><span class="counter" data-target="350">0</span><span class="plus">+</span></h3>
           <p>Youth Supported</p>
         </div>
-        <div class="col-md-3 stat-box">
-          <div class="icon-circle bg-success text-white mb-3">
+        <div class="col-6 col-md-3 stat-box">
+          <div class="icon-circle bg-success text-white mb-3 mx-auto">
             <i class="bi bi-calendar-event-fill"></i>
           </div>
           <h3><span class="counter" data-target="120">0</span><span class="plus">+</span></h3>
           <p>Annual Events</p>
         </div>
-        <div class="col-md-3 stat-box">
-          <div class="icon-circle bg-warning text-white mb-3">
+        <div class="col-6 col-md-3 stat-box">
+          <div class="icon-circle bg-warning text-white mb-3 mx-auto">
             <i class="bi bi-lightbulb-fill"></i>
           </div>
           <h3><span class="counter" data-target="45">0</span><span class="plus">+</span></h3>
           <p>Community Partners</p>
         </div>
-        <div class="col-md-3 stat-box">
-          <div class="icon-circle bg-danger text-white mb-3">
+        <div class="col-6 col-md-3 stat-box">
+          <div class="icon-circle bg-danger text-white mb-3 mx-auto">
             <i class="bi bi-heart-fill"></i>
           </div>
           <h3><span class="counter" data-target="1500">0</span><span class="plus">+</span></h3>
@@ -289,6 +330,33 @@
       </div>
     </div>
   </section>
+      <!-- Testimonials Section -->
+      <section class="testimonials bg-light py-5">
+        <div class="container">
+          <h2 class="text-center mb-5 text-primary">What People Are Saying</h2>
+          <div id="testimonialCarousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="testimonial-carousel-body">
+              <!-- Testimonials will load here dynamically -->
+            </div>
+            <div class="carousel-indicators" id="testimonial-indicators"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <!-- Add a button to link to Google Reviews -->
+    <div class="text-center mt-4">
+      <a href="https://www.google.com/search?q=youth+spot+bar+cic&oq=youth+spot+bar+&gs_lcrp=EgZjaHJvbWUqCAgBEAAYFhgeMgoIABBFGBYYHhg5MggIARAAGBYYHjIICAIQABgWGB4yDQgDEAAYhgMYgAQYigUyCggEEAAYgAQYogQyBwgFEAAY7wXSAQk5MDg4ajBqMTWoAgiwAgHxBerF3IbzHHjy&sourceid=chrome&ie=UTF-8#lrd=0x47d8a506d72c6e67:0x9d9e2631eb51a7de,1,,,," 
+         target="_blank" 
+         class="btn btn-primary">
+        Read and Write a Review to Us on Google
+      </a>
+    </div>
+  </div>
+      </section>   
   <section class="partners">
     <div class="container text-center">
       <h2 class="mb-4">Our Community Partners</h2>
@@ -451,5 +519,41 @@
       });
     });
   </script>
+  
+    <!-- Load Testimonials Dynamically -->
+    <script>
+      fetch("testimonials.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const carouselBody = document.getElementById("testimonial-carousel-body");
+          const indicators = document.getElementById("testimonial-indicators");
+  
+          data.forEach((item, index) => {
+            // Create Slide
+            const slide = document.createElement("div");
+            slide.className = "carousel-item" + (index === 0 ? " active" : "");
+            slide.innerHTML = `
+              <div class="testimonial-card mx-auto">
+                <p class="quote">“${item.quote}”</p>
+                <p class="testimonial-author">— ${item.author}</p>
+              </div>
+            `;
+            carouselBody.appendChild(slide);
+  
+            // Create Indicator
+            const indicator = document.createElement("button");
+            indicator.type = "button";
+            indicator.setAttribute("data-bs-target", "#testimonialCarousel");
+            indicator.setAttribute("data-bs-slide-to", index);
+            indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+            if (index === 0) {
+              indicator.className = "active";
+              indicator.setAttribute("aria-current", "true");
+            }
+            indicators.appendChild(indicator);
+          });
+        })
+        .catch((err) => console.error("Error loading testimonials:", err));
+    </script>
 </body>
 </html>
