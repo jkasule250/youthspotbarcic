@@ -47,21 +47,52 @@
         margin-top: 40px;
       }
 
+      .whats-new {
+        margin-top: 40px;
+      }
+
       .event {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         gap: 20px;
         margin-top: 20px;
       }
 
       .event img {
-        max-width: 100%;
+        max-width: 300px;
         border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
 
       .event-details {
         flex: 1;
+      }
+
+      .event-details h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .event-details p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
       }
 
       .area-tab-buttons {
@@ -179,16 +210,16 @@
   </section>
   <section class="whats-new">
     <div class="container">
-      <h2>What's New</h2>
-      <div class="event">
-        <img src="images/logos/SKATE JAM FITNESS.png" alt="Skate Jam Fitness" class="event-image" />
+      <h2 class="text-center mb-4">What's New</h2>
+      <div class="event d-flex flex-wrap align-items-center gap-4">
+        <img src="images/others/SKATE JAM FITNESS.png" alt="Skate Jam Fitness" class="event-image flex-shrink-0" />
         <div class="event-details">
           <h3>Skate Jam Fitness</h3>
           <p>Skate Jam Fitness is all about fun, fitness, and community. We're inviting people of all ages to come together for high-energy skate workouts to upbeat music. It’s more than just exercise—it’s movement, rhythm, and joy on wheels. Whether you're a beginner or a pro, you'll leave feeling energized and connected.</p>
           <p><strong>Dates:</strong> Saturdays from 17th of May - 28th of June 2025</p>
           <p><strong>Address:</strong> Park Active Age Centre, Rectory Rd, Dagenham RM10 9SA</p>
-          <p><strong>Time:</strong> Time: 12:30 PM - 1:30 PM</p>
-          <p><strong>Cost:</strong>Absolutely FREE!</p>
+          <p><strong>Time:</strong> 12:30 PM - 1:30 PM</p>
+          <p><strong>Cost:</strong> Absolutely FREE!</p>
           <a href="https://www.ticketsource.co.uk/skateclubcic" target="_blank" class="cta-btn">Book Now</a>
         </div>
       </div>
