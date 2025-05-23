@@ -81,9 +81,20 @@ body {
   }
   
   .scroll-down {
-    font-size: 0.9rem;
-    color: #fff;
-    opacity: 0.85;
+      animation: pulse 2s infinite alternate; /* Added animation name and duration */
+      font-size: 0.9rem;
+      color: #fff;
+      opacity: 0.85;
+  }
+  
+  /* Added keyframes for pulse animation */
+  @keyframes pulse {
+      0%, 100% {
+          opacity: 0.85;
+      }
+      50% {
+          opacity: 1;
+      }
   }
   
   @media (max-width: 768px) {
