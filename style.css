@@ -27,7 +27,7 @@ body {
   .hero-section {
     position: relative;
     background: url('images/others/header.jpg') center center/cover no-repeat;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     color: white;

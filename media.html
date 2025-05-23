@@ -38,29 +38,6 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       }
   
-      .testimonials {
-        background-color: #f3f9fb;
-        padding: 30px;
-        border-radius: 10px;
-        margin-bottom: 40px;
-      }
-  
-      .testimonial-card {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: center;
-      }
-  
-      .testimonial-card .quote {
-        font-style: italic;
-        font-size: 1.2rem;
-      }
-  
-      .testimonial-card .testimonial-author {
-        font-weight: bold;
-        margin-top: 10px;
-      }
-  
       .cta-btn {
         display: inline-block;
         margin: 10px;
@@ -112,25 +89,6 @@
         </div>
       </section>
   
-      <!-- Testimonials Section -->
-      <section class="testimonials bg-light py-5">
-        <div class="container">
-          <h2 class="text-center mb-5 text-primary">What People Are Saying</h2>
-          <div id="testimonialCarousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="testimonial-carousel-body">
-              <!-- Testimonials will load here dynamically -->
-            </div>
-            <div class="carousel-indicators" id="testimonial-indicators"></div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
-        </div>
-      </section>
-  
       <!-- Follow Us Section -->
       <section class="text-center my-5">
         <h2>Follow Us</h2>
@@ -148,11 +106,16 @@
       <div class="text-center my-5">
         <a href="contact.html" class="cta-btn">Contact Us</a>
       </div>
+
+      <!-- View Upcoming Events Section -->
+      <div class="text-center">
+        <a href="events.html" class="btn btn-primary">View Upcoming Events</a>
+      </div>
     </main>
   
     <!-- Footer -->
-    <footer class="footer-new bg-dark text-white py-5">
-      <div class="container">
+    <footer class="footer-new">
+      <div class="container footer-grid">
         <!-- Programs Section -->
         <div class="footer-col">
           <h4>Programs</h4>
@@ -166,7 +129,7 @@
             <li><a href="ourprogram.html">Street Ball Playouts</a></li>
           </ul>
         </div>
-    
+  
         <!-- Services Section -->
         <div class="footer-col">
           <h4>Services</h4>
@@ -176,7 +139,7 @@
             <li><a href="getinvolved.html#placements">Placements</a></li>
           </ul>
         </div>
-    
+  
         <!-- Contact Section -->
         <div class="footer-col">
           <h4>Contact</h4>
@@ -190,7 +153,7 @@
             <li><a href="ourprogram.html">Programs</a></li>
           </ul>
         </div>
-    
+  
         <!-- Newsletter Section -->
         <div class="footer-col newsletter">
           <h4>Newsletter</h4>
@@ -211,12 +174,12 @@
             </a>
           </div>
           <p class="contact-info mt-3">
-            <strong>Phone:</strong> +44 7495 071150<br />
+            <strong>Phone:</strong> <a href="tel:07495071150"></a> 07495 071150<br />
             <strong>Email:</strong> <a href="mailto:youthspotbar@outlook.com">youthspotbar@outlook.com</a>
           </p>
         </div>
       </div>
-    
+  
       <!-- Footer Bottom Section -->
       <div class="footer-bottom text-center mt-4">
         <hr />
@@ -236,42 +199,6 @@
           document.getElementById("navbar-placeholder").innerHTML = data;
         })
         .catch((err) => console.error("Failed to load navbar:", err));
-    </script>
-  
-    <!-- Load Testimonials Dynamically -->
-    <script>
-      fetch("testimonials.json")
-        .then((res) => res.json())
-        .then((data) => {
-          const carouselBody = document.getElementById("testimonial-carousel-body");
-          const indicators = document.getElementById("testimonial-indicators");
-  
-          data.forEach((item, index) => {
-            // Create Slide
-            const slide = document.createElement("div");
-            slide.className = "carousel-item" + (index === 0 ? " active" : "");
-            slide.innerHTML = `
-              <div class="testimonial-card mx-auto">
-                <p class="quote">“${item.quote}”</p>
-                <p class="testimonial-author">— ${item.author}</p>
-              </div>
-            `;
-            carouselBody.appendChild(slide);
-  
-            // Create Indicator
-            const indicator = document.createElement("button");
-            indicator.type = "button";
-            indicator.setAttribute("data-bs-target", "#testimonialCarousel");
-            indicator.setAttribute("data-bs-slide-to", index);
-            indicator.setAttribute("aria-label", `Slide ${index + 1}`);
-            if (index === 0) {
-              indicator.className = "active";
-              indicator.setAttribute("aria-current", "true");
-            }
-            indicators.appendChild(indicator);
-          });
-        })
-        .catch((err) => console.error("Error loading testimonials:", err));
     </script>
   
     <!-- Bootstrap Bundle (includes Popper.js) -->
