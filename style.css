@@ -130,23 +130,81 @@ body {
   }
   
   /* Footer */
-  .footer {
+
+  .footer-new {
     background-color: #095773;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 0.9rem;
+    color: white;
+    padding: 40px 0;
   }
-  .footer a {
-    color: #ffe4b3;
-    margin: 0 10px;
-    text-decoration: none;
+
+  .footer-new h4 {
     font-size: 1.2rem;
+    margin-bottom: 15px;
   }
-  .footer a:hover {
-    color: #fff;
+
+  .footer-new ul {
+    list-style: none;
+    padding: 0;
   }
-  
+
+  .footer-new ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-new ul li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-new ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-new .newsletter-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .footer-new .newsletter-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .footer-new .newsletter-form button:hover {
+    background-color: #0056b3;
+  }
+
+  .footer-new .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer-new .social-icons a:hover {
+    color: #007bff;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+  }
+
+  .footer-bottom .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-bottom .footer-links a:hover {
+    text-decoration: underline;
+  }
   /* Link Colors */
   a {
     color: #2d51a3;
