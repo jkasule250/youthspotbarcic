@@ -23,7 +23,7 @@
         color: white;
         padding: 300px 0;
         text-align: center;
-      }
+      } /* Ensure this closing brace matches an opening brace */
 
       .hero h1 {
         font-size: 3rem;
@@ -86,7 +86,7 @@
         color: white;
         text-decoration: none;
         border-radius: 5px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+        transition: background-color 0.3s ease, transform: scale(0.2s ease);
       }
 
       .cta-btn:hover {
@@ -121,7 +121,7 @@
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+        transition: background-color 0.3s ease, transform: 0.2s ease;
       }
 
       .btn-primary:hover {
@@ -141,9 +141,33 @@
     </div>
   </header>
   <main class="container">
+    <p class="text-center mt-4">
+      Welcome to Youth Spot Bar CIC's Programs! Explore our diverse range of activities designed to inspire, empower, and connect individuals of all ages in our community.
+    </p>
+    <div class="search-bar text-center mb-4">
+      <input type="text" id="programSearch" class="form-control w-50 mx-auto" placeholder="Search for a program..." aria-label="Search for a program" />
+    </div>
+
+    <section class="featured-program py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="mb-4">Featured Program</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/others/skateclub 2.jpg" alt="Skate Club" class="img-fluid rounded shadow-sm" />
+          </div>
+          <div class="col-md-6">
+            <h3>Skate Club</h3>
+            <p>Join our Skate Club and experience the joy of roller skating in a safe and fun environment. All ages are welcome, starting from 5 years old and upwards.</p>
+            <a href="#skate" class="btn btn-primary" aria-label="Learn more about Skate Club">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="program-tabs">
       <div class="tab-buttons">
-        <button class="tab active" data-tab="skate">Roller Skate Club</button>
+        <button class="tab active" data-tab="skate">Skate Club</button>
+        <button class="tab" data-tab="one-to-one">One to One Skating Sessions</button>
         <button class="tab" data-tab="smoothie">Smoothie Splash Bar</button>
         <button class="tab" data-tab="urban">Touch of Urban</button>
         <button class="tab" data-tab="dance">Dance Fitness Session</button>
@@ -153,23 +177,20 @@
       </div>
   
       <div class="tab-content active" id="skate">
-        <h2>Roller Skate Club</h2>
-        <img src="images/others/skate club.webp" alt="Roller Skate Club" class="program-image" />
-        <p>Come and roll with us at skate Club. <strong>All ages are welcome</strong>, starting from 5 years old and upwards.</p>
-        <p>Skate club operates both in schools and on open days for the public.</p>
-        <p>All skates gear and roller skates are provided to get you rolling with us.</p>
-        <p>Our indoor roller skating sessions promote health, teamwork, and fun. With themed nights and open community skates, we give youth a safe, exciting space to be active and social.</p>
-        <p>Don't forget to ask about our free skate loyalty card scheme.</p>
+        <h2>Skate Club</h2>
+        <img src="images/others/skateclub sue.jpg" alt="Skate Club" class="program-image" />
+        <p>Join our Skate Club and experience the joy of roller skating in a safe and fun environment. <strong>All ages are welcome</strong>, starting from 5 years old and upwards.</p>
+        <p>We provide all the necessary skating gear, including roller skates, so you can focus on having fun and staying active. Our sessions promote health, teamwork, and community bonding through themed nights and open community skates.</p>
         <p>We also run regular afterschool roller skating sessions at:</p>
         <ul>
           <li>Southern Road Primary School</li>
           <li>Keir Hardie Primary School</li>
           <li>Gascoigne Primary School</li>
         </ul>
-        <p>Our loyalty card scheme is designed to reward children, teens, and adults for their participation. By attending a certain number of sessions, participants can earn exciting rewards:</p>
+        <p>Our loyalty card scheme rewards participants for their dedication:</p>
         <ul>
-          <li><strong>Children and Teens:</strong> A free pair of roller skates at no extra cost.</li>
-          <li><strong>Adults:</strong> A £30 gift voucher to put towards purchasing their own pair of skates.</li>
+          <li><strong>Children and Teens:</strong> Earn a free pair of roller skates after attending a certain number of sessions.</li>
+          <li><strong>Adults:</strong> Receive a £30 gift voucher to put towards purchasing your own pair of skates.</li>
         </ul>
         <p>Join us to roll into fun, fitness, and rewards!</p>
         <h3>Days and Time</h3>
@@ -179,47 +200,47 @@
           <li>Fridays: <strong>3:30 pm - 4:30 pm</strong></li>
         </ul>
         <div class="text-center my-4">
-          <a href="https://www.ticketsource.co.uk/youthspotbarcic" 
-             target="_blank" 
-             class="btn btn-primary">
-            Book Now
-          </a>
+          <a href="https://www.ticketsource.co.uk/youthspotbarcic" target="_blank" class="btn btn-primary">Book Now</a>
         </div>
       </div>
-  
+      <div class="tab-content" id="one-to-one">
+        <h2>One-to-One Skating Sessions</h2>
+        <img src="images/others/one to one skate.jpg" alt="One-to-One Skating Sessions" class="program-image" />
+        <p>Our personalized skating sessions are perfect for individuals who want to learn or improve their skating skills. These sessions are tailored to your needs and provide focused guidance to help you achieve your goals.</p>
+        <ul>
+          <li><strong>Location:</strong> Barking and surrounding areas</li>
+          <li><strong>Session Time:</strong> 1 Hour</li>
+          <li><strong>Days:</strong> Weekdays and Weekends</li>
+        </ul>
+        <div class="text-center my-4">
+          <p>To book a one-to-one skating session, please contact us via WhatsApp or click the button below:</p>
+          <a href="https://wa.me/+447495071150?text=Hi%20Youth%20Spot%20Bar,%20I%20would%20like%20to%20book%20a%20one-to-one%20skating%20session." target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
       <div class="tab-content" id="smoothie">
         <h2>Smoothie Splash Bar</h2>
         <img src="images/others/smooth.webp" alt="Smoothie Splash Bar" class="program-image" />
-        <p>This is our mindfulness zone. Youth can unwind, talk, or just breathe. Mental well-being is at the heart of everything we do.</p>
-        <p>Youth Spot Bar delivers the Smoothie Splash Bar Pop up service hosting at events and delivering workshops in teaching children, teens, and adults on how to make delicious healthy smoothies for breakfast, lunch, and dinner.</p>
-        <p>To request for us to facilitate the above service, contact us for more information by emailing us.</p>
-        <p>Or complete our facilitating form using the link below and send us an email to notify us that you have completed it.</p>
+        <p>Our Smoothie Splash Bar is a mindfulness zone where youth can unwind, talk, and learn about healthy living. We host workshops teaching children, teens, and adults how to make delicious and nutritious smoothies for breakfast, lunch, and dinner.</p>
+        <p>We also offer pop-up services at events, bringing the Smoothie Splash Bar experience to your community.</p>
         <div class="text-center my-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsW1qnErOW0bNK06ucWQOjBIoqyhhVlpRzTL0ixT09DOaGbw/viewform?embedded=true" 
-             target="_blank" 
-             class="btn btn-primary">
-            Book Now
-          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsW1qnErOW0bNK06ucWQOjBIoqyhhVlpRzTL0ixT09DOaGbw/viewform?embedded=true" target="_blank" class="btn btn-primary">Book Now</a>
         </div>
       </div>
   
       <div class="tab-content" id="urban">
         <h2>Touch of Urban</h2>
         <img src="images/others/jewellery.webp" alt="Touch of Urban" class="program-image" />
-        <p>We run 1-on-1 and group mentoring for personal growth, leadership skills, and career readiness. Led by trusted adults and positive role models.</p>
-        <p>At Youth Spot Bar, we deliver jewellery making workshops for those ages 8 years and upwards. Called Young Urban Creators teaching children, teens, and adults on how to make jewellery from wood, eco-friendly plastic, stones, and seashells.</p>
-        <p>We take part in markets to showcase and sell our handmade jewellery wear in fundraising to support our jewellery workshops and other community activities we do. Which candidates can participate in, if registered on our work experience programme.</p>
+        <p>Our Young Urban Creators program teaches participants how to make eco-friendly jewelry using materials like wood, plastic, stones, and seashells. This program is open to individuals aged 8 and above.</p>
+        <p>Participants can also showcase and sell their creations at markets, with proceeds supporting our workshops and community activities.</p>
         <p><strong>Workshop Fee:</strong> £2 (learning how to make)</p>
         <p><strong>Workshop Time:</strong> Thursdays from 3:30 pm - 4:30 pm</p>
-        <p>To join this as part of our work experience programme taking on an Assistant / Coordinator role, see the link below. Age 13 and upwards. (Free to join)</p>
         <p><strong>Location:</strong> Barking Learning Centre, Youth Spot Bar Community Hub, IG11 7NB</p>
       </div>
   
       <div class="tab-content" id="dance">
         <h2>Dance Fitness Session</h2>
         <img src="images/programs/dance-fitness.jpg" alt="Dance Fitness Session" class="program-image" />
-        <p>From music production to video editing and digital storytelling, we give young people tools to express themselves creatively and build future-ready skills.</p>
-        <p>Our Dance Fitness Sessions are designed to promote physical health, confidence, and creativity. Participants will enjoy a mix of dance styles, fitness routines, and fun group activities.</p>
+        <p>Our Dance Fitness Sessions combine fun and fitness through a mix of dance styles and routines. These sessions are designed to promote physical health, confidence, and creativity.</p>
         <p><strong>Session Time:</strong> Saturdays from 10:00 am - 11:30 am</p>
         <p><strong>Location:</strong> Barking Learning Centre, Youth Spot Bar Community Hub, IG11 7NB</p>
       </div>
@@ -227,12 +248,11 @@
       <div class="tab-content" id="workshop">
         <h2>Hosting & Facilitating Workshops</h2>
         <img src="images/others/freepik-host-20250524212326OmSK.png" alt="Hosting & Facilitating Workshops" class="program-image" />
-        <p>Our events bring the whole community together! Join us for Skate Jams, Talent Shows, and Community Days celebrating youth and culture in Barking.</p>
-        <p>Sports, jewellery making, roller skating, and more — Youth Spot Bar's workforce team is always ready to bring the fun, get people involved, and create a great atmosphere filled with positive vibes and energy. We encourage individuals to learn new skills while having an amazing time.</p>
-        <p>We facilitate the following activities:</p>
+        <p>We host a variety of workshops, including sports, jewelry making, cooking, and more. Our team is dedicated to creating a positive and engaging atmosphere for all participants.</p>
+        <p>We facilitate activities such as:</p>
         <ul>
           <li>Roller Skating Club</li>
-          <li>Jewellery Workshop</li>
+          <li>Jewelry Workshop</li>
           <li>Badminton</li>
           <li>Tennis</li>
           <li>Cricket</li>
@@ -242,14 +262,6 @@
           <li>Dance Workout Session</li>
           <li>Birthday Parties (Sports, Roller Skating, and Smoothie Bar)</li>
         </ul>
-        <p>Call us out for an event, party, or workshop you need facilitating, and we’ll be there! All equipment and resources are provided by us to ensure a seamless and enjoyable experience.</p>
-        <div class="text-center my-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsW1qnErOW0bNK06ucWQOjBIoqyhhVlpRzTL0ixT09DOaGbw/viewform?embedded=true" 
-             target="_blank" 
-             class="btn btn-primary">
-            Book Now
-          </a>
-        </div>
       </div>
   
       <div class="tab-content" id="library">
@@ -267,7 +279,7 @@
   
       <div class="tab-content" id="street">
         <h2>Street Ball Playouts</h2>
-        <img src="images/programs/street-ball.jpg" alt="Street Ball Playouts" class="program-image" />
+        <img src="images/others/street ball playouts" alt="Street Ball Playouts" class="program-image" />
         <p>Welcome to Streetball Playouts — a place to have fun and stay active while building positive relationships.</p>
         <ul>
           <li>Badminton</li>
@@ -279,6 +291,95 @@
         </ul>
         <p>Runs in June and July at <strong>Barking Town Centre</strong></p>
         <p>Next sessions: June 2025, every Tuesday and Thursday from 3:30 pm - 6:30 pm</p>
+      </div>
+    </section>
+
+    <section class="program-calendar py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Upcoming Programs</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Skate Club</td>
+              <td>Every Tuesday</td>
+              <td>3:30 pm - 4:30 pm</td>
+              <td>Barking Learning Centre</td>
+            </tr>
+            <tr>
+              <td>Dance Fitness Session</td>
+              <td>Every Saturday</td>
+              <td>10:00 am - 11:30 am</td>
+              <td>Barking Learning Centre</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="testimonials-section py-4">
+      <h3 class="text-center">What Participants Are Saying</h3>
+      <blockquote class="blockquote text-center">
+        <p>"The Skate Club has been an amazing experience for my kids. They’ve learned so much and made new friends!"</p>
+        <footer class="blockquote-footer">Parent of a participant</footer>
+      </blockquote>
+    </section>
+
+    <section class="partners-section py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Our Partners</h2>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <img src="images/logo/community chest.jpg" width="110" height="50" alt="Partner 1" class="img-fluid" />
+          </div>
+          <div class="col-md-3">
+            <img src="images/logo/IMG_4268.png" alt="Partner 2" class="img-fluid" />
+          </div>
+          <div class="col-md-3">
+            <img src="images/logo/UkonLogoTransparent.png" width="120" alt="Partner 3" class="img-fluid" />
+        </div>
+          <div class="col-md-3">
+            <img src="images/logo/WhatsApp Image 2025-01-19 at 23.35.02_f7816e42.jpg" width="120" alt="Partner 4" class="img-fluid" />
+          </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                What is the age requirement for Skate Club?
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                The Skate Club is open to all ages, starting from 5 years old and upwards.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Do I need to bring my own skates?
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                No, we provide all the necessary skating gear, including roller skates.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   
@@ -293,6 +394,7 @@
         <h4>Programs</h4>
         <ul>
           <li><a href="ourprogram.html#skate">Roller Skate Club</a></li>
+          <li><a href="ourprogram.html#one-to-one">One to One Skating Sessions</a></li>
           <li><a href="ourprogram.html#smoothie">Smoothie Splash Bar</a></li>
           <li><a href="ourprogram.html#urban">Touch of Urban</a></li>
           <li><a href="ourprogram.html#dance">Dance Fitness Session</a></li>
@@ -426,6 +528,28 @@
       const tabId = tab.dataset.tab;
       activateTabById(tabId);
     });
+  });
+</script>
+<script>
+  const searchInput = document.getElementById("programSearch");
+  const programTabs = document.querySelectorAll(".tab-content");
+  const tabs = document.querySelectorAll(".tab");
+
+  searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    let foundMatch = false;
+
+    programTabs.forEach(tab => {
+      const content = tab.textContent.toLowerCase();
+      const matches = content.includes(searchTerm);
+      tab.style.display = matches ? "block" : "none";
+      if (matches) foundMatch = true;
+    });
+
+    if (!foundMatch) {
+      tabs.forEach(tab => tab.classList.remove("active"));
+      programTabs.forEach(tab => tab.classList.remove("active"));
+    }
   });
 </script>
   <!-- Bootstrap Bundle (includes Popper.js) -->

@@ -309,22 +309,22 @@
       <h2 class="text-center mb-4">Gallery Highlights</h2>
       <div class="row g-4">
         <div class="col-6 col-md-4">
-          <img src="images/gallery/highlight1.jpg" alt="Highlight 1" class="img-fluid rounded shadow-sm" />
+          <img src="images/others/street ball playouts" alt="Highlight 1" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="col-6 col-md-4">
-          <img src="images/gallery/highlight2.jpg" alt="Highlight 2" class="img-fluid rounded shadow-sm" />
+          <img src="images/others/skateclub young talents.jpg" alt="Highlight 2" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="col-6 col-md-4">
-          <img src="images/gallery/highlight3.jpg" alt="Highlight 3" class="img-fluid rounded shadow-sm" />
+          <img src="images/others/skateclub 2.jpg" alt="Highlight 3" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="col-6 col-md-4">
-          <img src="images/gallery/highlight4.jpg" alt="Highlight 4" class="img-fluid rounded shadow-sm" />
+          <img src="images/others/20250501_105314.jpg" alt="Highlight 4" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="col-6 col-md-4">
-          <img src="images/gallery/highlight5.jpg" alt="Highlight 5" class="img-fluid rounded shadow-sm" />
+          <img src="images/others/skateclub sue.jpg" alt="Highlight 5" class="img-fluid rounded shadow-sm" />
         </div>
         <div class="col-6 col-md-4">
-          <img src="images/gallery/highlight6.jpg" alt="Highlight 6" class="img-fluid rounded shadow-sm" />
+          <img src="images/others/maker's Market" alt="Highlight 6" class="img-fluid rounded shadow-sm" />
         </div>
       </div>
     </div>
@@ -424,6 +424,7 @@
       <section class="area-we-cover-tabs">
         <div class="container">
           <h2 class="text-center mb-4">Area We Cover</h2>
+          <p>We cover the following areas within London.</p>
           <div class="area-tab-buttons">
             <button class="area-tab active" data-target="barking">Barking & Dagenham</button>
             <button class="area-tab" data-target="newham">Newham</button>
@@ -431,35 +432,17 @@
             <button class="area-tab" data-target="havering">Havering</button>
             <button class="area-tab" data-target="hackney">Hackney</button>
           </div>
-          <div class="area-tab-content-wrapper">
-            <div class="area-tab-content active" id="barking">
-              <p>We run weekly programs and skate clubs across Barking & Dagenham community centres and schools.</p>
-            </div>
-            <div class="area-tab-content" id="newham">
-              <p>Newham youth have access to wellbeing lounges and streetball playouts during school breaks.</p>
-            </div>
-            <div class="area-tab-content" id="redbridge">
-              <p>Redbridge residents can join our digital and creative workshops year-round at partner venues.</p>
-            </div>
-            <div class="area-tab-content" id="havering">
-              <p>We host annual community festivals and mobile skate parks in Havering parks and libraries.</p>
-            </div>
-            <div class="area-tab-content" id="hackney">
-              <p>Hackney youth can access mentoring and creative arts programs through our partners and pop-ups.</p>
-            </div>
-          </div>
-        </div>
       </section>  
   <section class="partners">
     <div class="container text-center">
       <h2 class="mb-4">Our Community Partners</h2>
       <p class="mb-4">We’re proud to collaborate with organizations that share our vision for youth development and community impact.</p>
       <div class="partner-logos d-flex flex-wrap justify-content-center align-items-center gap-4">
-        <img src="images/logo/UkonLogoTransparent.png" alt="UKON CAREERS" class="partner-logo" />
+        <img src="images/logo/UkonLogoTransparent.png" width="120" alt="UKON CAREERS" class="partner-logo" />
         <img src="images/logo/IMG_4268.png" alt="The London Borough of Barking and Dagenham" class="partner-logo" />
-        <img src="images/logo/Screenshot 2025-01-06 233209.png" alt="Barking Sports for Change" class="partner-logo" />
-        <img src="images/logo/R.png" alt="LTA" class="partner-logo" />
-        <img src="images/logo/WhatsApp Image 2025-01-19 at 23.35.02_f7816e42.jpg" alt="Mark Your Mark" class="partner-logo" />
+        <img src="images/logo/Screenshot 2025-01-06 233209.png" width="120" alt="Barking Sports for Change" class="partner-logo" />
+        <img src="images/logo/R.png" width="120" alt="LTA" class="partner-logo" /> 
+        <img src="images/logo/WhatsApp Image 2025-01-19 at 23.35.02_f7816e42.jpg" width="120" alt="Mark Your Mark" class="partner-logo" />
       </div>
     </div>
   </section>
@@ -469,7 +452,8 @@
       <div class="footer-col">
         <h4>Programs</h4>
         <ul>
-          <li><a href="ourprogram.html#skate">Roller Skate Club</a></li>
+          <li><a href="ourprogram.html#skate">Skate Club</a></li>
+          <li><a href="ourprogram.html#one-to-one">One to One Skating Sessions</a></li>
           <li><a href="ourprogram.html#smoothie">Smoothie Splash Bar</a></li>
           <li><a href="ourprogram.html#urban">Touch of Urban</a></li>
           <li><a href="ourprogram.html#dance">Dance Fitness Session</a></li>
@@ -528,7 +512,13 @@
         </p>
       </div>
     </div>
-
+<div>
+  cookie-consent
+  <div class="cookie-consent">
+    <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+    <button class="btn btn-primary" id="accept-cookies">Accept</button>
+  </div>
+</div>
     <!-- Footer Bottom Section -->
     <div class="footer-bottom text-center mt-4">
       <hr />
@@ -648,5 +638,19 @@
         })
         .catch((err) => console.error("Error loading testimonials:", err));
     </script>
+    <script>
+      // Cookie Consent
+      document.addEventListener("DOMContentLoaded", () => {
+        const acceptCookiesButton = document.getElementById("accept-cookies");
+        const cookieConsent = document.querySelector(".cookie-consent");
+
+        if (acceptCookiesButton && cookieConsent) {
+          acceptCookiesButton.addEventListener("click", () => {
+            cookieConsent.style.display = "none";
+            // Here you can also set a cookie to remember the user's choice
+          });
+        }
+      });
+      </script>
 </body>
 </html>
