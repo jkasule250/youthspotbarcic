@@ -526,7 +526,7 @@
     });
   </script>
  <script>
-  const tabs = document.querySelectorAll(".tab");
+  const programTabsList = document.querySelectorAll(".tab");
   const contents = document.querySelectorAll(".tab-content");
 
   function activateTabById(tabId) {
@@ -554,7 +554,7 @@
   }
 
   // On click
-  tabs.forEach(tab => {
+  programTabsList.forEach(tab => {
     tab.addEventListener("click", () => {
       const tabId = tab.dataset.tab;
       activateTabById(tabId);
