@@ -449,89 +449,36 @@
       </div>
     </div>
   </section>
-  <footer class="footer-new">
-    <div class="container footer-grid">
-      <!-- Programs Section -->
-      <div class="footer-col">
-        <h4>Programs</h4>
-        <ul>
-          <li><a href="ourprogram.html#skate">Skate Club</a></li>
-          <li><a href="ourprogram.html#one-to-one">One to One Skating Sessions</a></li>
-          <li><a href="ourprogram.html#smoothie">Smoothie Splash Bar</a></li>
-          <li><a href="ourprogram.html#urban">Touch of Urban</a></li>
-          <li><a href="ourprogram.html#dance">Dance Fitness Session</a></li>
-          <li><a href="ourprogram.html#workshop">Hosting & Facilitating Workshops</a></li>
-          <li><a href="ourprogram.html#library">Kick Ball Library</a></li>
-          <li><a href="ourprogram.html#street">Street Ball Playouts</a></li>
-        </ul>
-      </div>
+  <div id="footer-placeholder"></div>
+  <script>
+    // Cookie Consent
+    document.addEventListener("DOMContentLoaded", () => {
+      const acceptCookiesButton = document.getElementById("accept-cookies");
+      const cookieConsent = document.querySelector(".cookie-consent");
 
-      <!-- Services Section -->
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="ourprogram.html">Well-being Lounge</a></li>
-          <li><a href="ourprogram.html">Community Events</a></li>
-          <li><a href="getinvolved.html#placements">Placements</a></li>
-        </ul>
-      </div>
+      if (acceptCookiesButton && cookieConsent) {
+        // Check if the cookie is already set
+        if (document.cookie.includes("cookiesAccepted=true")) {
+          cookieConsent.style.display = "none";
+        }
 
-      <!-- Contact Section -->
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="getinvolved.html">Get Involved</a></li>
-          <li><a href="ourprogram.html">Programs</a></li>
-        </ul>
-      </div>
-
-      <!-- Newsletter Section -->
-      <div class="footer-col newsletter">
-        <h4>Newsletter</h4>
-        <p>Subscribe to our newsletter to stay updated on our latest programs and events.</p>
-        <form action="#" method="post" class="newsletter-form">
-          <input type="email" placeholder="Enter your email" required />
-          <button type="submit" class="btn btn-teal">Subscribe</button>
-        </form>
-        <div class="social-icons mt-3">
-          <a href="https://wa.me/+447495071150" aria-label="WhatsApp">
-            <img src="images/social/Whatsapp-Icon--Streamline-Svg-Logos.png" alt="WhatsApp" />
-          </a>
-          <a href="#" aria-label="Instagram">
-            <img src="images/social/Instagram--Streamline-Ios-14.png" alt="Instagram" />
-          </a>
-          <a href="#" aria-label="Facebook">
-            <img src="images/social/Facebook--Streamline-Svg-Logos.png" alt="Facebook" />
-          </a>
-        </div>
-        <p class="contact-info mt-3">
-          <strong>Phone:</strong> <a href="tel:07495071150"></a> 07495 071150<br />
-          <strong>Email:</strong> <a href="mailto:youthspotbar@outlook.com">youthspotbar@outlook.com</a>
-        </p>
-      </div>
-    </div>
-<div>
-  cookie-consent
-  <div class="cookie-consent">
-    <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
-    <button class="btn btn-primary" id="accept-cookies">Accept</button>
-  </div>
-</div>
-    <!-- Footer Bottom Section -->
-    <div class="footer-bottom text-center mt-4">
-      <hr />
-      <p>&copy; 2025 Youth Spot Bar CIC. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="terms.html">Terms & Conditions</a> |
-        <a href="privacy.html">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
+        acceptCookiesButton.addEventListener("click", () => {
+          cookieConsent.style.display = "none";
+          // Set a cookie to remember the user's choice
+          document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60 * 60 * 24 * 365;
+        });
+      }
+    });
+  </script>
+  <script>
+    // Load footer.html dynamically
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error("Failed to load footer:", err));
+  </script>
   <script>
     // Load navbar.html dynamically
     fetch("nav.html")
@@ -641,19 +588,6 @@
         })
         .catch((err) => console.error("Error loading testimonials:", err));
     </script>
-    <script>
-      // Cookie Consent
-      document.addEventListener("DOMContentLoaded", () => {
-        const acceptCookiesButton = document.getElementById("accept-cookies");
-        const cookieConsent = document.querySelector(".cookie-consent");
-
-        if (acceptCookiesButton && cookieConsent) {
-          acceptCookiesButton.addEventListener("click", () => {
-            cookieConsent.style.display = "none";
-            // Here you can also set a cookie to remember the user's choice
-          });
-        }
-      });
-      </script>
+    <!-- Removed duplicate cookie consent script -->
 </body>
 </html>
