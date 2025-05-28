@@ -86,7 +86,7 @@
         color: white;
         text-decoration: none;
         border-radius: 5px;
-        transition: background-color 0.3s ease, transform: scale(0.2s ease);
+        transition: background-color 0.3s ease, transform 0.2s ease;
       }
 
       .cta-btn:hover {
@@ -121,7 +121,12 @@
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
-        transition: background-color 0.3s ease, transform: 0.2s ease;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
       }
 
       .btn-primary:hover {
@@ -321,7 +326,7 @@
             </tr>
             <tr>
               <td>Touch of Urban Workshop</td>
-              <td>Every Thursday</td>
+              <td>Monday - Friday</td>
               <td>3:30 pm - 4:30 pm</td>
               <td>Barking Learning Centre</td>
             </tr>
@@ -350,11 +355,21 @@
               <td>Barking Town Centre</td>
             </tr>
           </tr>
+          <tr>
+              <td>Hosting & Facilitating Workshops</td>
+              <td>Ongoing</td>
+              <td>Varies</td>
+              <td>Barking Learning Centre</td>
+            </tr>
+            <tr>
+              <td>Level Up Game Lounge</td>
+              <td>Every Friday</td>
+              <td>3:00 pm - 5:00 pm</td>
+              <td>Thames Community Hub</td>
           </tbody>
         </table>
       </div>
     </section>
-
     <section class="testimonials-section py-4">
       <h3 class="text-center">What Participants Are Saying</h3>
       <blockquote class="blockquote text-center">
@@ -530,17 +545,17 @@
   const contents = document.querySelectorAll(".tab-content");
 
   function activateTabById(tabId) {
-    tabs.forEach(t => t.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
-
-    const matchTab = document.querySelector(`.tab[data-tab="${tabId}"]`);
-    const matchContent = document.getElementById(tabId);
-
-    if (matchTab && matchContent) {
-      matchTab.classList.add("active");
-      matchContent.classList.add("active");
-      localStorage.setItem("activeProgramTab", tabId);
-    }
+      programTabsList.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+  
+      const matchTab = document.querySelector(`.tab[data-tab="${tabId}"]`);
+      const matchContent = document.getElementById(tabId);
+  
+      if (matchTab && matchContent) {
+        matchTab.classList.add("active");
+        matchContent.classList.add("active");
+        localStorage.setItem("activeProgramTab", tabId);
+      }
   }
 
   // From saved session
