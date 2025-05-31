@@ -146,13 +146,10 @@
     </div>
   </header>
   <main class="container">
-    <p class="text-center mt-4">
-      Welcome to Youth Spot Bar CIC's Programs! Explore our diverse range of activities designed to inspire, empower, and connect individuals of all ages in our community.
-    </p>
-    <div class="search-bar text-center mb-4">
-      <input type="text" id="programSearch" class="form-control w-50 mx-auto" placeholder="Search for a program..." aria-label="Search for a program" />
-    </div>
-
+    <section class="intro py-5">
+      <h2 class="text-center mb-4">Welcome to Our Programs</h2>
+      <p>At Youth Spot Bar CIC, we offer a variety of engaging programs designed to inspire and empower young people in our community. From roller skating clubs to dance fitness sessions, our activities promote health, creativity, and social connection.</p>
+      <p>Explore our featured program below and discover how you can get involved!</p>
     <section class="featured-program py-5 bg-light">
       <div class="container text-center">
         <h2 class="mb-4">Featured Program</h2>
@@ -244,7 +241,7 @@
   
       <div class="tab-content" id="dance">
         <h2>Dance Fitness Session</h2>
-        <img src="images/programs/dance-fitness.jpg" alt="Dance Fitness Session" class="program-image" />
+        <img src="images/Dance Fitness/Dance Fitness.jpg" alt="Dance Fitness Session" class="program-image" />
         <p>Our Dance Fitness Sessions combine fun and fitness through a mix of dance styles and routines. These sessions are designed to promote physical health, confidence, and creativity.</p>
         <p><strong>Session Time:</strong> Saturdays from 10:00 am - 11:30 am</p>
         <p><strong>Location:</strong> Barking Learning Centre, Youth Spot Bar Community Hub, IG11 7NB</p>
@@ -507,28 +504,6 @@
       const tabId = tab.dataset.tab;
       activateTabById(tabId);
     });
-  });
-</script>
-<script>
-  const searchInput = document.getElementById("programSearch");
-  const programTabs = document.querySelectorAll(".tab-content");
-  const tabs = document.querySelectorAll(".tab");
-
-  searchInput.addEventListener("input", () => {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    let foundMatch = false;
-
-    programTabs.forEach(tab => {
-      const content = tab.textContent.toLowerCase();
-      const matches = content.includes(searchTerm);
-      tab.style.display = matches ? "block" : "none";
-      if (matches) foundMatch = true;
-    });
-
-    if (!foundMatch) {
-      tabs.forEach(tab => tab.classList.remove("active"));
-      programTabs.forEach(tab => tab.classList.remove("active"));
-    }
   });
 </script>
   <!-- Bootstrap Bundle (includes Popper.js) -->
